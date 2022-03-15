@@ -29,7 +29,7 @@ object Task1 {
     println($"Кол-во записей ${booksDF.count()}\n")
 
     val highRatedBooksDF = booksDF.filter($"average_rating" > 4.5)
-    highRatedBooksDF.show(5, truncate=false)
+    highRatedBooksDF.show(10, truncate=false)
 
     val averageRating = booksDF.select(avg($"average_rating"))
     averageRating.show()
